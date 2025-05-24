@@ -1,0 +1,12 @@
+name: Reactor
+on:
+  push:
+    paths:
+      - stateA.txt
+jobs:
+  react:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run reactor
+        run: python3 bot_scripts/reactor.py

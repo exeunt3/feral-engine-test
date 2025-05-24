@@ -1,0 +1,11 @@
+name: Flipper
+on:
+  schedule:
+    - cron: "*/1 * * * *"  # every 1 minutes
+jobs:
+  flip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run flipper
+        run: python3 bot_scripts/flipper.py

@@ -1,0 +1,11 @@
+name: Modulator
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # every 15 minutes
+jobs:
+  modulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run modulator
+        run: python3 bot_scripts/modulator.py
