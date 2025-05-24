@@ -1,1 +1,1 @@
-active_interval = 1.0
+active_interval = 0.2
